@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="ResponsiveDashboard.css">
+    <link rel="stylesheet" href="ResponsiveDashboard.js">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h3>Dashboard</h3>
+                <button class="toggle-btn" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-title">Main</div>
+                <div class="menu-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Orders</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-users"></i>
+                    <span>Customers</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-box"></i>
+                    <span>Products</span>
+                </div>
+                <div class="menu-title">Settings</div>
+                <div class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span>Help</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Navigation -->
+            <div class="top-nav">
+                <button class="toggle-btn" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-menu">
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                        <span>Sarah Johnson</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="content">
+                <div class="page-header">
+                    <h2>Dashboard Overview</h2>
+                    <button class="btn">Generate Report</button>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="stats-cards">
+                    <div class="stats-card">
+                        <div class="stats-card-header">
+                            <div>
+                                <div class="stats-card-value">$24,780</div>
+                                <div class="stats-card-title">Total Revenue</div>
+                            </div>
+                            <div class="stats-card-icon blue">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                        </div>
+                        <div class="stats-card-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>12.5% from last month</span>
+                        </div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-card-header">
+                            <div>
+                                <div class="stats-card-value">1,245</div>
+                                <div class="stats-card-title">Total Orders</div>
+                            </div>
+                            <div class="stats-card-icon green">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                        </div>
+                        <div class="stats-card-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>8.2% from last month</span>
+                        </div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-card-header">
+                            <div>
+                                <div class="stats-card-value">856</div>
+                                <div class="stats-card-title">New Customers</div>
+                            </div>
+                            <div class="stats-card-icon orange">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                        <div class="stats-card-change negative">
+                            <i class="fas fa-arrow-down"></i>
+                            <span>3.1% from last month</span>
+                        </div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-card-header">
+                            <div>
+                                <div class="stats-card-value">92.5%</div>
+                                <div class="stats-card-title">Satisfaction Rate</div>
+                            </div>
+                            <div class="stats-card-icon red">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="stats-card-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>1.8% from last month</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Revenue Overview</h3>
+                            <div class="chart-actions">
+                                <select>
+                                    <option>This Year</option>
+                                    <option>Last Year</option>
+                                    <option>All Time</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder">
+                            <span>Revenue Chart Placeholder</span>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h3>Traffic Sources</h3>
+                            <div class="chart-actions">
+                                <select>
+                                    <option>This Month</option>
+                                    <option>Last Month</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder">
+                            <span>Pie Chart Placeholder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Orders Table -->
+                <div class="recent-orders">
+                    <div class="recent-orders-header">
+                        <h3>Recent Orders</h3>
+                        <button class="btn">View All</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#ORD-1234</td>
+                                <td>John Smith</td>
+                                <td>May 15, 2023</td>
+                                <td>$245.00</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-1233</td>
+                                <td>Emily Davis</td>
+                                <td>May 14, 2023</td>
+                                <td>$189.50</td>
+                                <td><span class="status pending">Pending</span></td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-1232</td>
+                                <td>Michael Brown</td>
+                                <td>May 14, 2023</td>
+                                <td>$420.00</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-1231</td>
+                                <td>Sarah Johnson</td>
+                                <td>May 13, 2023</td>
+                                <td>$76.99</td>
+                                <td><span class="status canceled">Canceled</span></td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                            <tr>
+                                <td>#ORD-1230</td>
+                                <td>David Wilson</td>
+                                <td>May 12, 2023</td>
+                                <td>$325.75</td>
+                                <td><span class="status completed">Completed</span></td>
+                                <td><i class="fas fa-ellipsis-v"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
